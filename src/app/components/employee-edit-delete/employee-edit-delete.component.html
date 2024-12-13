@@ -1,0 +1,51 @@
+<!-- src/app/employee-edit/employee-edit.component.html -->
+<div class="container mt-4">
+    <h2>Edit Employee</h2>
+    <form #employeeForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          class="form-control"
+          [(ngModel)]="employee.name"
+          name="name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          class="form-control"
+          [(ngModel)]="employee.email"
+          name="email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input
+          type="text"
+          id="phone"
+          class="form-control"
+          [(ngModel)]="employee.phone"
+          name="phone"
+        />
+      </div>
+      <button
+        type="button"
+        class="btn btn-success mt-3"
+        (click)="updateEmployee()"
+      >
+        Update
+      </button>
+      <button
+        type="button"
+        class="btn btn-danger mt-3"
+        (click)="deleteEmployee()"
+      >
+        Delete
+      </button>
+    </form>
+  </div>
+  
